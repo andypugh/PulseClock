@@ -1,4 +1,3 @@
-
 /*
 Pulse Clock system for radio time and Arduino
 */
@@ -45,8 +44,7 @@ int deb30min = 0;
 void mySetTime(time_t syncedTime)
 {
   // this is called from an interrupt so don't spend too much time here
-  if ((syncedTime - prevSync) < 200 || prevSync == 0) { // require two
-times within 2min before trusting them
+  if ((syncedTime - prevSync) < 200 || prevSync == 0) { // require two times within 2min before trusting them
     setTime(syncedTime);           // this sets the time
   }
   prevSync = syncedTime;         // save the time
@@ -57,10 +55,8 @@ void setup()
   Serial.begin(9600);
 
   // optional timezone offset (in hours)
-  radioClock.setTimeZoneOffset(0);       // only needed if radio time
-not correct for your timezone.
-  radioClock.setTimeCallback(mySetTime);  // give the library the
-function to set the time
+  radioClock.setTimeZoneOffset(0);       // only needed if radio time not correct for your timezone.
+  radioClock.setTimeCallback(mySetTime);  // give the library the function to set the time
 
   radioClock.start();   // start the Radio Clock
   static int oldCount = -1;
@@ -81,8 +77,7 @@ function to set the time
 
   // extract timestamp of last pulse from eeprom to work out where the
   // physical hands are
-  // The two MSBs are used as in index into other parts of EEPROM for
-the LSBs for wear levelling.
+  // The two MSBs are used as in index into other parts of EEPROM for the LSBs for wear levelling.
   // This should give 80 years EEPROM life.
   lastPulse.b[3] = EEPROM.read(0);
   lastPulse.b[2] = EEPROM.read(1);
@@ -96,8 +91,7 @@ the LSBs for wear levelling.
   prevSync = now(); // re-used variable to get a static value
   // Copy the 12-hour time from the EEPROM and the Date am/pm from now()
   lastPulse.ul = (lastPulse.ul % 43200UL) + (prevSync - (prevSync %43200UL));
-  if ((lastPulse.ul - prevSync) > 600){ // it is quicker to wait if
-the "face time" is 10 mins fast
+  if ((lastPulse.ul - prevSync) > 600){ // it is quicker to wait if the "face time" is 10 mins fast
     lastPulse.ul -= 43200UL;
   }
   Serial.print("12-hour delta ");
