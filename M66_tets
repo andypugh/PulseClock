@@ -1,12 +1,13 @@
-Issuing EMC_TASK_SET_MODE -- 	 (  +504,+24,  +132,    +2,)
+Issuing EMC_TASK_SET_MODE -- 	 (  +504,+24,  +117,    +2,)
 NML_INTERP_LIST(0x55a970c638e0)::clear(): discarding 0 items
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=1, line_number=8
+emcTaskPlanClose() called at emc/task/emctask.cc:217
 emcTaskPlanSynch() returned 0
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=24, type=EMC_TASK_PLAN_SYNCH}, list_size=0
 emcTaskPlanLevel() returned 0
 Issuing EMC_TASK_PLAN_SYNCH -- 	 (  +516,+24,    +0,)
 emcTaskPlanSynch() returned 0
-Issuing EMC_TASK_PLAN_RUN -- 	 (  +507,+24,  +133,    +0,)
+Issuing EMC_TASK_PLAN_RUN -- 	 (  +507,+24,    +0,    +1,)
 emcTaskPlanOpen(/home/andypugh/linuxcnc/nc_files/f-test.ngc) returned 0
 emcTaskPlanClearWait() called
 emcTaskPlanRead() returned 0
@@ -14,10 +15,15 @@ emcTaskPlanLine() returned 1
 emcTaskPlanCommand(#1 = 0) called. (line_number=1)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 1
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 1
+NML_INTERP_LIST(0x55a970c638e0)::clear(): discarding 0 items
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 2
 emcTaskPlanCommand(O100 repeat [4]) called. (line_number=2)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 2
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 2
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 3
@@ -25,10 +31,14 @@ emcTaskPlanCommand((DEBUG, 1 - #1)) called. (line_number=3)
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=1, line_number=8
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 3
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 3
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 4
 emcTaskPlanCommand(G1 F50 X[2 + #1]) called. (line_number=4)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 4
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 4
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 5
@@ -37,10 +47,14 @@ NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEA
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=3, line_number=4
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 5
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 5
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 6
 emcTaskPlanCommand(G1 F50 X[4 + #1]) called. (line_number=6)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 6
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 6
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 7
@@ -48,6 +62,8 @@ emcTaskPlanCommand((DEBUG, 3 - #1)) called. (line_number=7)
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=4, line_number=6
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=5, line_number=6
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 7
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 7
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 8
@@ -57,6 +73,8 @@ emcTaskPlanExecute(0) return 2
 emcTaskPlanLine() returned 8
 emcTaskPlanSetWait() called
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=7, line_number=6
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 8
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=6
 emcTaskPlanLevel() returned 0
 Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0321\032-\0320.000000,)
@@ -66,7 +84,7 @@ Outgoing motion id is 4.
 Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,2.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,1.666667,30.480000,508.000000,    +0,    -1,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=4
 emcTaskPlanLevel() returned 0
-Motion id 4 took 1.207516 seconds.
+Motion id 4 took 1.207384 seconds.
 Motion id 0 took 0.000000 seconds.
 Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0322\032-\0320.000000,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=3
@@ -75,7 +93,7 @@ Outgoing motion id is 6.
 Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,4.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,1.666667,30.480000,508.000000,    +0,    -1,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=2
 emcTaskPlanLevel() returned 0
-Motion id 6 took 1.207619 seconds.
+Motion id 6 took 1.207345 seconds.
 Motion id 0 took 0.000000 seconds.
 Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0323\032-\0320.000000,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=40, type=EMC_AUX_INPUT_WAIT}, list_size=1
@@ -92,10 +110,14 @@ emcTaskPlanCommand((DEBUG, 4 - #1)) called. (line_number=9)
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=1, line_number=6
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 9
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 9
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 10
 emcTaskPlanCommand(G1 F50 Y[8 + #1]) called. (line_number=10)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 10
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 10
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 11
@@ -104,84 +126,98 @@ NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEA
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=3, line_number=10
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 11
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 11
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 12
 emcTaskPlanCommand(G1 F50 X[8 + #1]) called. (line_number=12)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 12
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 12
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 13
 emcTaskPlanCommand(#1 = [#1 + 8]) called. (line_number=13)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 13
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 13
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 14
 emcTaskPlanCommand(O100 endrepeat) called. (line_number=14)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 1
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 1
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=2
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=1
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=0
+NML_INTERP_LIST(0x55a970c638e0)::clear(): discarding 0 items
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 2
 emcTaskPlanCommand(O100 repeat [4]) called. (line_number=2)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 2
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 2
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 3
 emcTaskPlanCommand((DEBUG, 1 - #1)) called. (line_number=3)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=4, line_number=12
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=5, line_number=12
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=1, line_number=12
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=2, line_number=12
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 3
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 3
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 4
 emcTaskPlanCommand(G1 F50 X[2 + #1]) called. (line_number=4)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 4
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 4
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 5
 emcTaskPlanCommand((DEBUG, 2 - #1)) called. (line_number=5)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=6, line_number=4
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=7, line_number=4
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=3, line_number=4
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=4, line_number=4
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 5
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 5
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 6
 emcTaskPlanCommand(G1 F50 X[4 + #1]) called. (line_number=6)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 6
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 6
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 7
 emcTaskPlanCommand((DEBUG, 3 - #1)) called. (line_number=7)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=8, line_number=6
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=9, line_number=6
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=5, line_number=6
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=6, line_number=6
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 7
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 7
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 8
 emcTaskPlanCommand(M66 P1 L3 Q3) called. (line_number=8)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=40,type=EMC_AUX_INPUT_WAIT}) : list_size=10, line_number=6
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=40,type=EMC_AUX_INPUT_WAIT}) : list_size=7, line_number=6
 emcTaskPlanExecute(0) return 2
 emcTaskPlanLine() returned 8
 emcTaskPlanSetWait() called
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=11, line_number=6
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=10
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=8, line_number=6
 emcTaskPlanLevel() returned 0
-Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0324\032-\0320.000000,)
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=9
-emcTaskPlanLevel() returned 0
-Outgoing motion id is 10.
-Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,4.000000,8.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,6.666667,30.480000,508.000000,    +0,    -1,)
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=8
-emcTaskPlanLevel() returned 0
-Motion id 10 took 1.227190 seconds.
-Motion id 0 took 0.000000 seconds.
-Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0325\032-\0320.000000,)
+emcTaskPlanLine() returned 8
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=7
 emcTaskPlanLevel() returned 0
 Outgoing motion id is 12.
 Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,8.000000,8.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,3.333333,30.480000,508.000000,    +0,    -1,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=6
 emcTaskPlanLevel() returned 0
-Motion id 12 took 1.214756 seconds.
+Motion id 12 took 2.697276 seconds.
 Motion id 0 took 0.000000 seconds.
 Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0321\032-\0328.000000,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=5
@@ -190,8 +226,8 @@ Outgoing motion id is 4.
 Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,10.000000,8.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,1.666667,30.480000,508.000000,    +0,    -1,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=4
 emcTaskPlanLevel() returned 0
-Motion id 4 took 1.207676 seconds.
-Motion id 0 took 0.000000 seconds.
+Motion id 4 took 1.207150 seconds.
+Motion id 0 took 0.000001 seconds.
 Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0322\032-\0328.000000,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=3
 emcTaskPlanLevel() returned 0
@@ -199,7 +235,7 @@ Outgoing motion id is 6.
 Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,12.000000,8.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,1.666667,30.480000,508.000000,    +0,    -1,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=2
 emcTaskPlanLevel() returned 0
-Motion id 6 took 1.207156 seconds.
+Motion id 6 took 1.207800 seconds.
 Motion id 0 took 0.000000 seconds.
 Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0323\032-\0328.000000,)
 NML_INTERP_LIST(0x55a970c638e0)::get(): {size=40, type=EMC_AUX_INPUT_WAIT}, list_size=1
@@ -216,10 +252,14 @@ emcTaskPlanCommand((DEBUG, 4 - #1)) called. (line_number=9)
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=1, line_number=6
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 9
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 9
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 10
 emcTaskPlanCommand(G1 F50 Y[8 + #1]) called. (line_number=10)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 10
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 10
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 11
@@ -228,92 +268,91 @@ NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEA
 NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=3, line_number=10
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 11
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 11
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 12
 emcTaskPlanCommand(G1 F50 X[8 + #1]) called. (line_number=12)
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 12
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 12
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 13
 emcTaskPlanCommand(#1 = [#1 + 8]) called. (line_number=13)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 13
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 13
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 14
 emcTaskPlanCommand(O100 endrepeat) called. (line_number=14)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 1
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 1
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=2
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=1
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=0
+NML_INTERP_LIST(0x55a970c638e0)::clear(): discarding 0 items
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 2
 emcTaskPlanCommand(O100 repeat [4]) called. (line_number=2)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 2
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 2
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 3
 emcTaskPlanCommand((DEBUG, 1 - #1)) called. (line_number=3)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=4, line_number=12
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=5, line_number=12
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=1, line_number=12
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=2, line_number=12
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 3
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 3
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 4
 emcTaskPlanCommand(G1 F50 X[2 + #1]) called. (line_number=4)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 4
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 4
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 5
 emcTaskPlanCommand((DEBUG, 2 - #1)) called. (line_number=5)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=6, line_number=4
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=7, line_number=4
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=3, line_number=4
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=4, line_number=4
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 5
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 5
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 6
 emcTaskPlanCommand(G1 F50 X[4 + #1]) called. (line_number=6)
 emcTaskPlanExecute(0) return 0
 emcTaskPlanLine() returned 6
+emcTaskPlanLevel() returned 0
+emcTaskPlanLine() returned 6
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 7
 emcTaskPlanCommand((DEBUG, 3 - #1)) called. (line_number=7)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=8, line_number=6
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=9, line_number=6
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=128,type=EMC_TRAJ_LINEAR_MOVE}) : list_size=5, line_number=6
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=280,type=EMC_OPERATOR_DISPLAY}) : list_size=6, line_number=6
 emcTaskPlanExecute(0) return 0
+emcTaskPlanLine() returned 7
+emcTaskPlanLevel() returned 0
 emcTaskPlanLine() returned 7
 emcTaskPlanRead() returned 0
 emcTaskPlanLine() returned 8
 emcTaskPlanCommand(M66 P1 L3 Q3) called. (line_number=8)
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=40,type=EMC_AUX_INPUT_WAIT}) : list_size=10, line_number=6
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=40,type=EMC_AUX_INPUT_WAIT}) : list_size=7, line_number=6
 emcTaskPlanExecute(0) return 2
 emcTaskPlanLine() returned 8
 emcTaskPlanSetWait() called
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=11, line_number=6
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=10
+NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=8, line_number=6
 emcTaskPlanLevel() returned 0
-Issuing EMC_OPERATOR_DISPLAY -- 	 (   +13,+280,    +0,    +0,\0324\032-\0328.000000,)
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=9
+emcTaskPlanLine() returned 8
+NML_INTERP_LIST(0x55a970c638e0)::get(): {size=128, type=EMC_TRAJ_LINEAR_MOVE}, list_size=7
 emcTaskPlanLevel() returned 0
-Outgoing motion id is 10.
-Issuing EMC_TRAJ_LINEAR_MOVE -- 	 (  +220,+128,    +0,12.000000,16.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,    +2,6.666667,30.480000,508.000000,    +0,    -1,)
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=280, type=EMC_OPERATOR_DISPLAY}, list_size=8
-emcTaskPlanLevel() returned 0
-Issuing EMC_TASK_ABORT -- 	 (  +503,+24,  +134,)
-NML_INTERP_LIST(0x55a970c638e0)::clear(): discarding 8 items
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=1, line_number=6
-emcTaskPlanClose() called at emc/task/emctask.cc:217
-NML_INTERP_LIST(0x55a970a045e0)::clear(): discarding 0 items
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=24, type=EMC_TASK_PLAN_SYNCH}, list_size=0
-emcTaskPlanLevel() returned 0
-Outgoing motion id is 6.
-Motion id 10 took 0.639957 seconds.
-Motion id 0 took 0.000000 seconds.
-Issuing EMC_TASK_PLAN_SYNCH -- 	 (  +516,+24,    +0,)
-emcTaskPlanSynch() returned 0
-Issuing EMC_TRAJ_SET_TELEOP_ENABLE -- 	 (  +230,+24,  +135,    +0,)
-Issuing EMC_TASK_SET_MODE -- 	 (  +504,+24,  +136,    +3,)
-NML_INTERP_LIST(0x55a970c638e0)::clear(): discarding 0 items
-NML_INTERP_LIST(0x55a970c638e0)::append(nml_msg_ptr{size=24,type=EMC_TASK_PLAN_SYNCH}) : list_size=1, line_number=6
-emcTaskPlanSynch() returned 0
-NML_INTERP_LIST(0x55a970c638e0)::get(): {size=24, type=EMC_TASK_PLAN_SYNCH}, list_size=0
-emcTaskPlanLevel() returned 0
-Issuing EMC_TASK_PLAN_SYNCH -- 	 (  +516,+24,    +0,)
-emcTaskPlanSynch() returned 0
+Outgoing motion id is 12.
